@@ -1,0 +1,107 @@
+{
+  "day1-theory": {
+    "title": "OCI Foundations \u2014 Day 1 | Interactive Learning Platform",
+    "kind": "theory",
+    "day": 1
+  },
+  "day1-lab": {
+    "title": "OCI IAM Lab Visualizer \u2014 Day 1 | 1Z0-1067-26",
+    "kind": "lab",
+    "day": 1
+  },
+  "day2-theory": {
+    "title": "OCI Security, Governance & Cost Management \u2014 Day 2 | Interactive Learning Platform",
+    "kind": "theory",
+    "day": 2
+  },
+  "day2-lab": {
+    "title": "Day 2 Lab \u2014 Security & Governance | 1Z0-1067-26",
+    "kind": "lab",
+    "day": 2
+  },
+  "day3-theory": {
+    "title": "OCI Linux, Networking & CLI/SDK \u2014 Day 3 | Interactive Learning Platform",
+    "kind": "theory",
+    "day": 3
+  },
+  "day3-lab": {
+    "title": "Day 3 Lab \u2014 Linux Administration + OCI CLI + OCI SDK | 1Z0-1067-26",
+    "kind": "lab",
+    "day": 3
+  },
+  "day4-theory": {
+    "title": "OCI Operational Professional \u2014 Day 4: Infrastructure as Code & Terraform",
+    "kind": "theory",
+    "day": 4
+  },
+  "day4-lab": {
+    "title": "Day 4 Lab \u2014 Terraform & OCI Resource Manager | 1Z0-1067-26",
+    "kind": "lab",
+    "day": 4
+  },
+  "day5-theory": {
+    "title": "OCI Networking, VCN, Compute & Storage \u2014 Day 5 | Interactive Learning Platform",
+    "kind": "theory",
+    "day": 5
+  },
+  "day5-lab": {
+    "title": "Day 5 Lab \u2014 Production Networking | 1Z0-1067-26",
+    "kind": "lab",
+    "day": 5
+  },
+  "day6-theory": {
+    "title": "OCI Security, Encryption, PKI & Vault/KMS \u2014 Day 6 | Interactive Learning Platform",
+    "kind": "theory",
+    "day": 6
+  },
+  "day6-lab": {
+    "title": "Day 6 Lab \u2014 OCI Vault, Key Management & Secrets | 1Z0-1067-26",
+    "kind": "lab",
+    "day": 6
+  },
+  "day7-theory": {
+    "title": "OCI Operational Professional \u2014 Day 7: Database, HA & Disaster Recovery",
+    "kind": "theory",
+    "day": 7
+  },
+  "day7-lab": {
+    "title": "Day 7 Lab \u2014 High Availability & Disaster Recovery | 1Z0-1067-26",
+    "kind": "lab",
+    "day": 7
+  },
+  "day8-theory": {
+    "title": "OCI Troubleshooting, Networking & Incident Response \u2014 Day 8 | Interactive Learning Platform",
+    "kind": "theory",
+    "day": 8
+  },
+  "day9-theory": {
+    "title": "OCI Operational Professional \u2014 Day 9: Monitoring, Observability & Incident Response",
+    "kind": "theory",
+    "day": 9
+  },
+  "day9-lab": {
+    "title": "Day 9 Lab \u2014 Observability & OS Management | 1Z0-1067-26",
+    "kind": "lab",
+    "day": 9
+  },
+  "day10-theory": {
+    "title": "OCI Enterprise Governance, Cost, Security & Operations \u2014 Day 10 Capstone | Interactive Learning Platform",
+    "kind": "theory",
+    "day": 10
+  },
+  "day11-theory": {
+    "title": "OCI Complete Revision, Skill Check & Certification Prep \u2014 Day 11 | Interactive Learning Platform",
+    "kind": "theory",
+    "day": 11
+  },
+  "practice-days1-6": {
+    "title": "OCI Foundations \u2014 Day 1\u20136 Visualizer",
+    "kind": "practice",
+    "day": null
+  },
+  "practice-exam-bank": {
+    "title": "OCI Exam Visualizer \u2014 1Z0-1067-25 Cloud Ops Professional",
+    "kind": "practice",
+    "day": null
+  }
+}
