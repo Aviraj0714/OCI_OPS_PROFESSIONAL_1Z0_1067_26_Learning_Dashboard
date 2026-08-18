@@ -7,7 +7,8 @@ import {
   Home, LayoutDashboard, BookOpen, TrendingUp, BarChart3, Settings, Menu, X,
   Maximize2, Minimize2, Search, ChevronDown, ChevronRight, CheckCircle2, Circle,
   Sun, Moon, RotateCcw, ArrowRight, Flame, Layers, Target, Compass,
-  MonitorPlay, ArrowLeft, Cloud, CloudCog, Server, Network, Database, ShieldCheck
+  MonitorPlay, ArrowLeft, Cloud, CloudCog, Server, Network, Database, ShieldCheck,
+  MessageCircle, Send, Sparkles, Minus, Trash2
 } from "lucide-react";
 
 const SYLLABUS = [{"day": 1, "domainSections": ["Cloud Computing Foundations", "OCI Global Infrastructure & Resiliency Architecture", "Identity & Access Management (IAM) Fundamentals", "Users, Groups & IAM Policy Administration", "Compartments, Tagging & Governance Design", "Day 1 Hands-on Lab, Troubleshooting & Certification Readiness"], "tags": ["Traditional IT vs Cloud", "Virtualization Concepts", "Service Models", "Deployment Models", "CapEx vs OpEx", "OCI Overview", "Regions & Realms", "Availability Domains", "Fault Domains", "Workload Placement Design", "Authentication vs Authorization", "Identity Domains", "Domain Types", "Federation & SSO", "Users", "Groups", "RBAC", "Policy Syntax", "Least Privilege", "Policy Verbs", "Compartments", "Compartment Hierarchy", "Tagging Strategy", "Quotas", "Naming Standards", "OCI Console/CLI Lab", "IAM Troubleshooting", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Cloud Computing Foundations", "bullets": ["Traditional data center infrastructure and its operational limitations", "Virtualization concept and hypervisors (Type 1 vs Type 2) and how OCI abstracts physical hardware", "Cloud service models: IaaS, PaaS, SaaS and where OCI services fit each model", "Cloud deployment models: Public, Private, Hybrid, Multicloud", "CapEx vs OpEx and cloud economics fundamentals", "Shared Responsibility Model: customer vs provider ownership (foundation for Day 6 security)", "Common mistake: assuming cloud removes all operational responsibility"]}, {"title": "OCI Global Infrastructure & Resiliency Architecture", "bullets": ["Introduction to Oracle Cloud Infrastructure and its global architecture", "OCI Regions and Realms (commercial, government) and region-selection criteria", "Availability Domains and physical data-center isolation for fault tolerance", "Fault Domains within an Availability Domain for anti-affinity placement", "Design consideration: choosing region/AD/FD for latency, compliance and high availability", "Common mistake: placing all instances in a single Fault Domain", "OCI Free Tier, tenancy and account basics"]}, {"title": "Identity & Access Management (IAM) Fundamentals", "bullets": ["Core IAM concepts: authentication vs authorization vs accounting", "Identity Domain overview, purpose and the tenancy's Default Domain", "Identity Domain types: Default, Free, Oracle Apps Premium, Premium", "Creating a new Identity Domain (step-by-step walkthrough)", "Federation and Single Sign-On (SSO) concepts, introductory", "Troubleshooting: Identity Domain replication delay and login failures"]}, {"title": "Users, Groups & IAM Policy Administration", "bullets": ["Creating and managing Users and Groups in an Identity Domain", "Role-Based Access Control (RBAC) and least-privilege principles", "IAM Policy syntax and statement structure", "Policy verbs: inspect, read, use, manage and their scope of permission", "Writing policies to grant access to compartments and resources", "Best practice: group-based policy assignment instead of per-user policies", "Troubleshooting: diagnosing \"Authorization failed\" errors from missing or misordered policy statements"]}, {"title": "Compartments, Tagging & Governance Design", "bullets": ["Compartment concept, the root compartment and compartment design patterns", "Designing a compartment hierarchy for governance, isolation and cost allocation", "Naming standards and tagging strategy: defined tags vs free-form tags", "Compartment Quotas to control resource consumption", "Cost allocation using compartments and tags", "Design consideration: balancing compartment granularity against administrative overhead"]}, {"title": "Day 1 Hands-on Lab, Troubleshooting & Certification Readiness", "bullets": ["LAB: Create an Identity Domain, Users, Groups, a Compartment hierarchy and attach an IAM Policy", "CLI practice: oci iam user list", "oci iam group list", "oci iam compartment create", "Validation task: confirm policy enforcement by testing access as a restricted user", "Troubleshooting exercise: resolve a deliberately broken policy statement", "Certification objectives covered: Cloud Concepts, OCI Architecture, Identity and Access Management", "Frequently tested services: IAM, Identity Domains, Compartments", "Common exam mistake: confusing tenancy-level policies with compartment-scoped policies", "Scenario-based question and interview question on IAM design", "Daily Assessment: 15 MCQs on Cloud Fundamentals, OCI Infrastructure and IAM"]}], "bt": "Understand -> Apply", "outcomes": ["(CO1) Explain the fundamentals of cloud computing and differentiate between service and deployment models", "(CO2) Explain OCI IAM concepts and identify the appropriate Identity Domain type for a scenario"], "focus": "Cloud Fundamentals, OCI Global Infrastructure, IAM & Identity Domains, Users/Groups/Policies, Compartments & Tagging Governance"}, {"day": 2, "domainSections": ["Security Fundamentals & Defense-in-Depth", "Cloud Guard, Security Zones & Security Advisor", "Cost Management, Budgets & Licensing", "Governance Framework & Organization Management", "Day 2 Hands-on Lab, Troubleshooting & Certification Readiness"], "tags": ["CIA Triad", "Defense in Depth", "Zero Trust Principles", "Shared Responsibility Revisited", "Cloud Guard", "Security Zones", "Security Advisor", "Automated Guardrails", "Budgets", "Cost Analysis", "Licensing Models", "Marketplace", "Service Limits", "Cloud Advisor", "Organization Management", "Compliance Readiness", "Security & Cost Lab", "Governance Troubleshooting", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Security Fundamentals & Defense-in-Depth", "bullets": ["Confidentiality, Integrity and Availability (CIA triad)", "Defense-in-depth and layered security architecture", "Zero Trust principles: never trust, always verify", "Shared Responsibility Model revisited for security ownership boundaries", "Native vs third-party security tooling overview"]}, {"title": "Cloud Guard, Security Zones & Security Advisor", "bullets": ["Cloud Guard architecture: Detectors, Targets and Responders", "Cloud Guard recipes and problem management workflow", "Security Zones and Security Zone Recipes as automated guardrails", "Security Advisor recommendations and posture checks", "Design consideration: enabling Cloud Guard at tenancy vs compartment level", "Common mistake: enabling Cloud Guard without defining a remediation workflow", "Troubleshooting: investigating and resolving a Cloud Guard problem"]}, {"title": "Cost Management, Budgets & Licensing", "bullets": ["Creating and managing Budgets with threshold-based alert rules", "Cost Analysis dashboard: filtering by compartment, tag and service", "Bring Your Own License (BYOL) vs License Included models", "OCI Marketplace: discovering and deploying partner listings", "Cost-saving levers: reserved capacity and right-sizing (introductory)", "Cost consideration: tagging discipline as a prerequisite for accurate cost analysis"]}, {"title": "Governance Framework & Organization Management", "bullets": ["Service Limits, Quotas and requesting limit increases", "Cloud Advisor recommendations across cost, performance, security and HA", "Organization Management: multi-tenancy and tenancy linking", "Governance frameworks: tagging policy, compartment policy, guardrails", "Compliance considerations: data residency and audit readiness (introductory)", "Best practice: reviewing Cloud Advisor recommendations on a recurring cadence"]}, {"title": "Day 2 Hands-on Lab, Troubleshooting & Certification Readiness", "bullets": ["LAB: Enable Cloud Guard, create a Security Zone and configure a Budget with an alert", "LAB: Review Cost Analysis and Cloud Advisor recommendations for a sample tenancy", "CLI practice: oci cloud-guard target list", "oci budgets budget list", "Troubleshooting exercise: a Security Zone blocking a legitimate resource creation request", "Certification objectives covered: Security, Governance, Cost Management", "Common exam mistake: confusing Security Zones (preventive) with Cloud Guard (detective/responsive)", "Scenario discussion: designing guardrails for a new tenancy", "Interview question and Daily Assessment: 15 MCQs on Security, Governance and Cost Management"]}], "bt": "Understand -> Apply -> Analyze", "outcomes": ["(CO4) Explain foundational security principles that underpin OCI security services"], "focus": "Security Fundamentals, Cloud Guard, Security Zones, Security Advisor, Governance, Budgets, Cost Analysis, Licensing"}, {"day": 3, "domainSections": ["Linux Architecture, Filesystem & Access Control", "Linux Processes, Services & Operations", "Networking Fundamentals \u2014 Models & Addressing", "Networking Fundamentals \u2014 Services, Protocols & Security Controls", "OCI Cloud Shell & CLI Fundamentals", "SDK & API Concepts", "Day 3 Hands-on Lab, Troubleshooting & Certification Readiness"], "tags": ["Linux Architecture", "Filesystem Hierarchy", "Users & Permissions", "Ownership", "Processes", "Services (systemd)", "Package Managers", "Cron Jobs", "Log Files", "OSI Model", "TCP/IP Model", "IPv4 Addressing", "CIDR", "Subnetting", "Routing", "Switching", "DNS", "DHCP", "NAT", "TLS/SSL", "Firewalls", "Load Balancer Basics", "Cloud Shell", "CLI Installation", "Command Structure", "Profiles & Authentication", "REST API Fundamentals", "SDK Overview", "Request Signing", "Access Method Comparison", "Linux & CLI Lab", "Networking Troubleshooting Exercise", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Linux Architecture, Filesystem & Access Control", "bullets": ["Linux architecture: kernel, shell and distributions used in OCI (Oracle Linux, Ubuntu)", "Filesystem Hierarchy Standard and navigation commands", "Linux users, groups and the file-permission model (rwx)", "Changing ownership and permissions with chown and chmod", "Common mistake: overly permissive chmod 777 usage"]}, {"title": "Linux Processes, Services & Operations", "bullets": ["Process management: viewing, prioritizing and terminating processes", "Managing services with systemd (systemctl start/stop/enable/status)", "Package managers: yum/dnf and apt for software installation", "Scheduling recurring tasks with cron jobs", "Log files and basic troubleshooting commands (journalctl, tail, grep, top)", "Environment variables and Bash scripting basics"]}, {"title": "Networking Fundamentals \u2014 Models & Addressing", "bullets": ["OSI 7-layer model and how it maps to real-world troubleshooting", "TCP/IP model and how data flows across a network", "IPv4 addressing structure and address classes", "CIDR notation and subnet mask calculation", "Subnetting concepts: dividing a network into smaller address blocks", "ARP: resolving IP addresses to MAC addresses"]}, {"title": "Networking Fundamentals \u2014 Services, Protocols & Security Controls", "bullets": ["Routing and switching fundamentals: how traffic is directed within and between networks", "DNS resolution basics and DHCP address assignment", "NAT (Network Address Translation) for private-to-public address mapping", "HTTP vs HTTPS, the TLS/SSL handshake, and SSH for secure remote access", "ICMP for connectivity diagnostics (ping, traceroute) and TCP vs UDP characteristics", "Stateful vs stateless firewalls (foundation for Security Lists and NSGs in Day 5)", "Load Balancer basics: distributing traffic and improving availability"]}, {"title": "OCI Cloud Shell & CLI Fundamentals", "bullets": ["OCI Cloud Shell: pre-authenticated, browser-based terminal", "Installing and configuring the OCI CLI locally", "CLI command structure: oci <service> <resource> <action>", "Environment variables and CLI configuration profiles", "CLI authentication methods: API keys, config file, instance principals (introductory)", "Troubleshooting: resolving a CLI \"NotAuthorizedOrNotFound\" configuration error"]}, {"title": "SDK & API Concepts", "bullets": ["REST API basics: requests, responses and status codes", "OCI SDKs (Python, Java, Go and others): purpose and use cases", "API request signing and authentication with API keys", "Comparing Console, CLI, SDK and API access methods", "Design consideration: choosing SDK/API versus CLI for automation workflows"]}, {"title": "Day 3 Hands-on Lab, Troubleshooting & Certification Readiness", "bullets": ["LAB: Configure OCI CLI authentication and run list/create/delete commands", "LAB: Use Cloud Shell to inspect compartments, users and running instances", "LAB: Make a simple authenticated API call using an SDK snippet", "Troubleshooting exercise: diagnose a connectivity failure using ping, traceroute and DNS lookup commands", "Certification objectives covered: Operating Systems Basics, Networking Basics, CLI/SDK/API", "Common exam mistake: confusing CIDR prefix length with the number of usable host addresses", "Scenario-based question and interview question on Linux/CLI fundamentals", "Daily Assessment: 15 MCQs on Linux, Networking, CLI, SDK and API"]}], "bt": "Understand -> Apply", "outcomes": ["(CO1) Describe Linux architecture, filesystem layout and the permission model used on OCI compute instances", "(CO2) Perform basic Linux administration and troubleshooting tasks required to manage OCI compute instances"], "focus": "Linux Fundamentals, Networking Fundamentals (OSI/TCP-IP/CIDR/Routing/DNS/Firewalls), Cloud Shell, CLI, SDK, API"}, {"day": 4, "domainSections": ["Infrastructure as Code Concepts", "Terraform Core Concepts & State Management", "OCI Resource Manager", "Drift Detection, Templates & Remote Execution", "Day 4 Hands-on Lab, Troubleshooting & Certification Readiness"], "tags": ["What is IaC", "Benefits", "Declarative vs Imperative", "IaC in DevOps", "Terraform Workflow", "State", "Providers", "Variables", "Outputs", "Modules", "Resource Manager Overview", "Stacks", "Source Providers", "Job Execution", "Drift Detection", "Templates", "Remote-Exec", "Terraform Best Practices", "Terraform Lab", "Resource Manager Troubleshooting", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Infrastructure as Code Concepts", "bullets": ["Manual provisioning vs Infrastructure as Code", "Benefits of IaC: repeatability, version control and drift prevention", "Declarative (Terraform) vs imperative (scripting) provisioning approaches", "IaC in the context of DevOps and CI/CD pipelines (introductory)"]}, {"title": "Terraform Core Concepts & State Management", "bullets": ["Terraform workflow: write, plan, apply, destroy, validate, format", "Terraform State file: purpose, sensitivity and remote backends", "State Locking to prevent concurrent modification conflicts", "Providers (the OCI provider) and provider configuration", "Input Variables and Output Values", "Modules for reusable, versioned infrastructure code", "HCL (HashiCorp Configuration Language) syntax basics"]}, {"title": "OCI Resource Manager", "bullets": ["Resource Manager as OCI's managed Terraform service", "Creating a Stack from a Terraform configuration", "Source Providers: Console upload, Object Storage, Git (GitHub/GitLab)", "Running Plan, Apply and Destroy jobs on a Stack", "Job history and log review for auditing changes", "Troubleshooting: a failed Apply job due to a provider authentication error"]}, {"title": "Drift Detection, Templates & Remote Execution", "bullets": ["Drift Detection: identifying manual changes made outside Terraform", "Reconciling drift and re-applying the desired state", "Resource Manager Templates: private and Oracle-provided", "Remote-exec provisioners for post-provisioning configuration", "Best practices: state locking, version pinning and workspace separation", "Common mistake: manually editing resources managed by Terraform"]}, {"title": "Day 4 Hands-on Lab, Troubleshooting & Certification Readiness", "bullets": ["LAB: Write a basic Terraform configuration for a compartment and VCN", "LAB: Deploy the configuration via an OCI Resource Manager Stack", "LAB: Trigger and review a Drift Detection job", "CLI practice: oci resource-manager stack create", "oci resource-manager job list", "Troubleshooting exercise: resolve a Terraform state lock conflict", "Certification objectives covered: Infrastructure as Code, Resource Manager", "Common exam mistake: assuming Resource Manager stores credentials inside the Terraform configuration", "Scenario-based question and interview question on IaC workflows", "Daily Assessment: 15 MCQs on IaC, Terraform and Resource Manager"]}], "bt": "Understand -> Apply -> Analyze", "outcomes": ["(CO3) Explain why Infrastructure as Code is used to operate cloud environments reliably"], "focus": "Infrastructure as Code, Terraform Fundamentals, OCI Resource Manager, Stacks, Drift Detection, Templates"}, {"day": 5, "domainSections": ["Networking Deep Dive \u2014 CIDR Planning & Routing", "Virtual Cloud Network (VCN) Architecture", "Compute Instances & Cloud-init Automation", "Storage Fundamentals & Configuration Management", "Day 5 Architecture Lab, Troubleshooting & Certification Readiness"], "tags": ["CIDR Planning", "Route Tables", "Gateways", "Public vs Private Subnets", "VCN", "Subnets", "Gateways", "Route Tables", "Security Lists", "Compute Instances", "Shapes", "Boot Volumes", "Cloud-init", "Instance Metadata", "Object Storage", "Block Storage", "File Storage", "Storage Design", "Ansible", "Deployment Lab", "Networking/Storage Troubleshooting", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Networking Deep Dive \u2014 CIDR Planning & Routing", "bullets": ["Subnetting and CIDR block planning for a VCN", "Route Tables and route rules", "NAT Gateway vs Internet Gateway vs Service Gateway", "Public vs private subnet design", "Security Lists and Network Security Groups (NSGs), introductory", "Design consideration: reserving CIDR space for future subnet growth"]}, {"title": "Virtual Cloud Network (VCN) Architecture", "bullets": ["Creating a VCN and public/private subnets", "Attaching an Internet Gateway, NAT Gateway and Service Gateway", "Configuring Route Tables and Security Lists", "Single-VCN (monolithic) architecture design considerations", "VCN peering concept, introductory", "Common mistake: missing a route rule after adding a new gateway", "Troubleshooting: a subnet with no outbound internet access"]}, {"title": "Compute Instances & Cloud-init Automation", "bullets": ["Launching Compute instances: shapes, images and boot volumes", "Bare metal vs Virtual Machine instances", "Cloud-init for automated instance bootstrapping", "SSH key injection and initial access", "Instance metadata service basics", "Troubleshooting: an instance stuck in provisioning or failing cloud-init"]}, {"title": "Storage Fundamentals & Configuration Management", "bullets": ["Object Storage: buckets, objects and storage tiers", "Block Storage: boot and block volumes, and volume backups", "File Storage Service: mount targets, exports and NFS", "Design consideration: choosing the right storage type for a workload", "Ansible basics for configuration management after provisioning", "Cost consideration: storage tiering for infrequently accessed data"]}, {"title": "Day 5 Architecture Lab, Troubleshooting & Certification Readiness", "bullets": ["LAB: Build a 2-tier VCN (public/private subnets) with a Compute instance", "LAB: Attach a Block Volume and create an Object Storage bucket", "LAB: Bootstrap the instance with Cloud-init", "CLI practice: oci network vcn create", "oci compute instance launch", "Troubleshooting exercise: fix a Security List blocking SSH access", "Certification objectives covered: Networking, Compute, Storage", "Common exam mistake: confusing Security Lists (subnet-level) with NSGs (VNIC-level)", "Scenario-based question and interview question on deployment architecture", "Daily Assessment: 15 MCQs on Networking, VCN, Compute and Storage"]}], "bt": "Understand -> Apply", "outcomes": ["(CO3) Plan an IP addressing and routing scheme for a Virtual Cloud Network"], "focus": "VCN Architecture, Routing & Gateways, Compute & Cloud-init, Object/Block/File Storage, Ansible"}, {"day": 6, "domainSections": ["Security & Encryption Fundamentals", "OCI Vault & Key Management Service (KMS)", "Secrets Management, Key Rotation & Replication", "Security Best Practices & Posture Review", "Day 6 Hands-on Lab, Troubleshooting & Certification Readiness"], "tags": ["Symmetric vs Asymmetric Encryption", "Encryption at Rest/Transit", "PKI", "Vault Overview", "KMS", "Master Encryption Keys", "HSM", "Secrets Management", "Key Rotation", "Key Replication", "DR Readiness", "Defense in Depth", "Least Privilege", "Bastion Access", "Compliance", "Vault/KMS Lab", "Encryption Troubleshooting", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Security & Encryption Fundamentals", "bullets": ["Symmetric vs Asymmetric encryption concepts", "Encryption at rest vs encryption in transit", "Digital Certificates and Public Key Infrastructure (PKI)", "Certificate Authorities and the chain of trust", "Why key management matters for compliance"]}, {"title": "OCI Vault & Key Management Service (KMS)", "bullets": ["OCI Vault architecture: Vaults and Keys", "Key Management Service (KMS) and Hardware Security Modules (HSM)", "Creating Vaults and Master Encryption Keys", "Virtual vs Software vs HSM-protected keys", "Using Vault keys to encrypt Block Volumes and Object Storage", "Design consideration: choosing a key-protection mode based on compliance requirements"]}, {"title": "Secrets Management, Key Rotation & Replication", "bullets": ["Storing and retrieving Secrets from Vault", "Secret versions and rotation strategies", "Key Rotation: scheduled and manual rotation", "Key Replication across regions for disaster-recovery readiness", "Integrating Vault secrets with applications and Compute instances", "Troubleshooting: an application failing after a key rotation"]}, {"title": "Security Best Practices & Posture Review", "bullets": ["Applying least-privilege IAM policies alongside encryption controls", "Network security layering: NSGs, Security Lists and the Bastion service", "Bastion service for secure private access, introductory", "Audit and compliance considerations for key management", "Common security misconfigurations and how to avoid them", "Best practice: rotating keys on a defined schedule rather than only on suspected compromise"]}, {"title": "Day 6 Hands-on Lab, Troubleshooting & Certification Readiness", "bullets": ["LAB: Create a Vault, a Master Encryption Key and a Secret", "LAB: Encrypt a Block Volume using a customer-managed key", "LAB: Rotate a key and observe version history", "CLI practice: oci kms management vault create", "oci vault secret create", "Troubleshooting exercise: diagnose access-denied errors when retrieving a Secret", "Certification objectives covered: Encryption, Vault, Key Management, Security Best Practices", "Common exam mistake: assuming key deletion is immediate rather than scheduled", "Scenario-based question and interview question on encryption architecture", "Daily Assessment: 15 MCQs on Encryption, Vault, KMS and Secrets"]}], "bt": "Understand -> Apply -> Analyze", "outcomes": ["(CO4) Explain encryption and PKI concepts that underpin OCI Vault and KMS"], "focus": "Encryption & PKI Fundamentals, OCI Vault, KMS, Secrets Management, Key Rotation & Replication, Security Best Practices"}, {"day": 7, "domainSections": ["Database Fundamentals for Cloud Operations", "High Availability Design Principles", "Disaster Recovery, Backup & Recovery Planning", "OCI Full Stack Disaster Recovery", "Day 7 Architecture Scenarios, Troubleshooting & Certification Readiness"], "tags": ["RDBMS Concepts", "Transactions & ACID", "OLTP vs OLAP", "OCI Database Options", "HA Principles", "Redundancy", "Load Balancing", "Auto Scaling", "Disaster Recovery", "RTO/RPO", "Backup Strategy", "Cross-Region Replication", "Full Stack DR Service", "DR Protection Groups", "DR Plans", "Automated Failover", "HA/DR Case Studies", "Troubleshooting Exercise", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Database Fundamentals for Cloud Operations", "bullets": ["Relational database concepts: tables, schemas and SQL basics", "Transactions and ACID properties", "Indexes and database normalization, introductory", "OLTP vs OLAP workloads (conceptual)", "Overview of OCI database services (Autonomous Database, DB Systems), introductory", "Backup and replication concepts for databases"]}, {"title": "High Availability Design Principles", "bullets": ["High Availability principles: redundancy, failover and eliminating single points of failure", "Using multiple Availability Domains/Fault Domains for HA design", "Load Balancer role in distributing traffic and performing health checks", "Auto Scaling concept for elastic capacity, introductory", "Design consideration: HA within a region vs across regions"]}, {"title": "Disaster Recovery, Backup & Recovery Planning", "bullets": ["Disaster Recovery concepts: Recovery Time Objective (RTO) and Recovery Point Objective (RPO)", "Backup strategies for Compute, Block Volume and Object Storage", "Cross-region replication for disaster recovery", "DR site strategies: active-active, active-passive and pilot light", "Backup validation as an ongoing operational discipline"]}, {"title": "OCI Full Stack Disaster Recovery", "bullets": ["OCI Full Stack Disaster Recovery (Full Stack DR) service overview", "DR Protection Groups and DR Plans", "Automated switchover and failover with Full Stack DR", "Testing DR plans without impacting production", "Troubleshooting: a DR plan execution failure at the switchover step"]}, {"title": "Day 7 Architecture Scenarios, Troubleshooting & Certification Readiness", "bullets": ["Scenario: design an HA architecture for a 3-tier web application", "Scenario: design a DR plan for a mission-critical workload", "LAB: Configure a Load Balancer across two Availability Domains for HA", "Troubleshooting exercise: a Load Balancer marking all backends unhealthy after a DR failover", "Certification objectives covered: High Availability, Disaster Recovery, Full Stack DR", "Common exam mistake: confusing RTO (time to recover) with RPO (acceptable data loss)", "Scenario-based question and interview question on HA/DR design", "Daily Assessment: 15 MCQs on HA, DR and Full Stack DR"]}], "bt": "Understand -> Apply -> Analyze", "outcomes": ["(CO5) Explain basic database concepts needed to reason about HA/DR for data tiers"], "focus": "Database Fundamentals, High Availability Design, Disaster Recovery & Backup, Full Stack DR"}, {"day": 8, "domainSections": ["Compute & SSH Troubleshooting Methodology", "Network Troubleshooting \u2014 VPN & FastConnect", "Load Balancer Troubleshooting", "Storage Troubleshooting", "Day 8 Hands-on Troubleshooting Lab & Certification Readiness"], "tags": ["Troubleshooting Methodology", "Compute Failures", "SSH Connectivity", "Console Connection", "VPN Troubleshooting", "FastConnect Troubleshooting", "Flow Logs", "Load Balancer Architecture", "Health Checks", "Backend Sets", "TLS Issues", "Block Volume Issues", "File Storage Issues", "Performance Diagnostics", "Troubleshooting Lab", "Root Cause Analysis", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Compute & SSH Troubleshooting Methodology", "bullets": ["Structured troubleshooting methodology: identify, isolate, diagnose, resolve, prevent", "Common Compute instance failures: boot, capacity and image issues", "Troubleshooting SSH connectivity: keys, Security Lists and NSGs", "Using Console Connection (Serial Console) for out-of-band access", "Instance diagnostics: run-once scripts and instance metrics", "Logs to inspect: instance boot and console history logs", "Preventive measure: standardized custom images with baked-in agents"]}, {"title": "Network Troubleshooting \u2014 VPN & FastConnect", "bullets": ["Site-to-Site VPN architecture and common failure points", "IPSec tunnel status and BGP session troubleshooting", "FastConnect: private connectivity concepts and provisioning issues", "Route table and Security List misconfigurations affecting connectivity", "Diagnostic tools: VCN Flow Logs and Network Path Analyzer, introductory", "Root cause pattern: asymmetric routing between on-premises and OCI"]}, {"title": "Load Balancer Troubleshooting", "bullets": ["Load Balancer architecture: listeners, backend sets and health checks", "Diagnosing unhealthy backend sets", "SSL/TLS certificate issues on Load Balancers", "Common misconfigurations causing 502/503 errors", "Preventive measure: aligning health-check paths with actual application readiness endpoints"]}, {"title": "Storage Troubleshooting", "bullets": ["Block Volume attach/detach failures and performance issues", "Volume backup and restore failure scenarios", "File Storage mount target and export path issues", "NFS permission and connectivity troubleshooting", "Diagnostic tools: volume performance metrics and iostat"]}, {"title": "Day 8 Hands-on Troubleshooting Lab & Certification Readiness", "bullets": ["LAB: Fix a broken SSH connection using a Security List correction and Console Connection", "LAB: Diagnose and repair an unhealthy Load Balancer backend set", "LAB: Resolve a Block Volume attachment failure", "Root cause analysis exercise across a multi-layer failure scenario", "Certification objectives covered: Troubleshooting across Compute, Network, Load Balancer and Storage", "Common exam mistake: troubleshooting the application layer before ruling out network/security misconfiguration", "Scenario-based question and interview question on troubleshooting methodology", "Daily Assessment: 15 MCQs on Compute, Network, LB and Storage Troubleshooting"]}], "bt": "Analyze", "outcomes": ["(CO5) Diagnose and resolve common Compute instance access and boot issues"], "focus": "Structured Troubleshooting: Compute/SSH, VPN/FastConnect, Load Balancer, Block/File Storage"}, {"day": 9, "domainSections": ["Monitoring Service & Metric Queries", "Notifications & Alarms", "Logging Service & Connector Hub", "Audit Service, Incident Response & Capacity Planning", "Day 9 Operations Dashboard Lab, Troubleshooting & Certification Readiness"], "tags": ["Monitoring Service", "Metrics & Namespaces", "Metric Query Language", "Dashboards", "Notifications Service", "Alarms", "Topics & Subscriptions", "Alert Strategy", "Logging Service", "Service/Custom/Audit Logs", "Connector Hub", "Logging Best Practices", "Audit Service", "Audit Logs", "Incident Response", "Capacity & Performance Monitoring", "Observability Lab", "Monitoring Troubleshooting", "Exam Objectives", "Daily MCQs"], "sections": [{"title": "Monitoring Service & Metric Queries", "bullets": ["OCI Monitoring service architecture: metrics and namespaces", "Built-in service metrics vs custom metrics", "Writing Metric Queries (MQL) to analyze resource health", "Creating custom Dashboards for visualization", "Monitoring strategy: which metrics matter for each service tier"]}, {"title": "Notifications & Alarms", "bullets": ["Notifications service: Topics and Subscriptions", "Creating Alarms based on metric thresholds", "Alarm states: OK, Firing and notification routing", "Integrating alarms with email, Slack or PagerDuty (conceptual)", "Alert strategy: avoiding alarm fatigue with meaningful thresholds"]}, {"title": "Logging Service & Connector Hub", "bullets": ["OCI Logging: Service, Custom and Audit log categories", "Enabling and searching logs in the Logging Console", "Connector Hub: routing logs and metrics to Object Storage, Streaming and Functions", "Log-based alerting use cases", "Logging best practice: centralizing logs before they are needed for an incident"]}, {"title": "Audit Service, Incident Response & Capacity Planning", "bullets": ["OCI Audit service: automatic API call recording", "Audit log structure and retention", "Querying Audit Logs for security investigations", "Incident response workflow: detect, triage, contain, remediate, review", "Capacity planning and performance monitoring tied to Governance (Day 2/10)"]}, {"title": "Day 9 Operations Dashboard Lab, Troubleshooting & Certification Readiness", "bullets": ["LAB: Build a Monitoring dashboard with custom metric queries", "LAB: Configure an Alarm with a Notification Topic and email subscription", "LAB: Enable Audit Logs and search for a specific API event", "Troubleshooting exercise: an Alarm that never fires due to an incorrect metric query", "Certification objectives covered: Monitoring, Notifications, Logging, Audit", "Common exam mistake: confusing the Audit service (automatic, tenancy-wide) with custom Logging (opt-in)", "Scenario-based question and interview question on observability design", "Daily Assessment: 15 MCQs on Monitoring, Notifications, Logging and Audit"]}], "bt": "Understand -> Apply -> Analyze", "outcomes": ["(CO5) Interpret OCI Monitoring metrics and construct metric queries for operational insight"], "focus": "Monitoring & Metric Queries, Notifications & Alarms, Logging & Connector Hub, Audit Service & Incident Response"}, {"day": 10, "domainSections": ["Governance Framework Review & Organization Management", "Cost Optimization Strategy", "Security Posture Review & Compliance Readiness", "End-to-End Operations Case Study", "Day 10 Comprehensive Assessment & Certification Readiness"], "tags": ["Governance Consolidation", "Policy-as-Guardrail", "Organization Management", "Cost Optimization", "Right-Sizing", "Idle Resource Cleanup", "Commitment Discounts", "Security Posture Review", "Compliance Readiness", "Remediation Planning", "Case Study", "Full Architecture Build", "Team Design & Presentation", "Comprehensive Assessment", "Case Study Review", "Exam Objectives"], "sections": [{"title": "Governance Framework Review & Organization Management", "bullets": ["Consolidated review: compartments, tagging and policies as governance tools", "Security Zones and Cloud Guard as automated guardrails, revisited", "Organization Management for multi-tenancy governance", "Building a governance checklist for enterprise tenancies"]}, {"title": "Cost Optimization Strategy", "bullets": ["Reviewing Cost Analysis and Budgets for optimization opportunities", "Right-sizing Compute shapes and storage tiers", "Idle resource identification and cleanup", "Reserved capacity and commitment-based discounts (conceptual)", "Operations knowledge: a recurring cost-review cadence as an operational practice"]}, {"title": "Security Posture Review & Compliance Readiness", "bullets": ["End-to-end security review: IAM, Vault, Cloud Guard, Security Zones", "Compliance readiness checklist: audit logs, encryption, access reviews", "Identifying and remediating common security gaps", "Patch management and backup validation as ongoing operational disciplines"]}, {"title": "End-to-End Operations Case Study", "bullets": ["Case Study: operate a multi-tier application spanning networking, compute, storage, security and observability", "Applying IAM, Terraform, VCN, Compute, Vault and Monitoring together", "Team-based design and presentation of the case study architecture", "Peer review criteria: high availability, security, cost and operational readiness"]}, {"title": "Day 10 Comprehensive Assessment & Certification Readiness", "bullets": ["Daily Assessment: 20 MCQs spanning Governance, Cost, Security and Case Study concepts", "Peer review and instructor feedback on case study submissions", "Certification objectives covered: Governance, Cost Management, Security Review", "Scenario-based question and interview question drawing on the full case study"]}], "bt": "Evaluate -> Create", "outcomes": ["(CO6) Evaluate and design a governance framework appropriate for an enterprise OCI tenancy"], "focus": "Governance Review, Cost Optimization, Security Posture Review, End-to-End Operations Case Study, Comprehensive Assessment"}, {"day": 11, "domainSections": ["Complete Topic Revision", "Oracle Skill Check & Architecture Discussions", "Scenario-Based Questions & 250+ MCQ Practice Bank", "Interview Preparation & Doubt Clearing"], "tags": ["Days 1-10 Recap", "Cross-Domain Concept Map", "Skill Check Review", "Architecture Deep-Dive", "Exam Question Patterns", "Scenario Practice", "MCQ Practice Bank", "Timed Drills", "Interview Prep", "Open Q&A", "Weak-Area Identification"], "sections": [{"title": "Complete Topic Revision", "bullets": ["Recap: Cloud/OCI Foundations, IAM, Compartments and Governance", "Recap: Security, Cloud Guard, Cost Management", "Recap: Linux, CLI, SDK, API, Terraform and Resource Manager", "Recap: Networking, VCN, Compute and Storage", "Recap: Vault/KMS, HA/DR, Troubleshooting and Observability"]}, {"title": "Oracle Skill Check & Architecture Discussions", "bullets": ["Walkthrough of Oracle University Skill Check style questions", "Group architecture discussions revisiting design trade-offs", "Common exam traps and how OCI exam questions are structured"]}, {"title": "Scenario-Based Questions & 250+ MCQ Practice Bank", "bullets": ["Scenario sets covering IAM, Networking, Security, HA/DR and Troubleshooting", "Practice set 1: Foundations, IAM, Security, Cost (60 questions)", "Practice set 2: Terraform, Networking, Compute, Storage (60 questions)", "Practice set 3: Vault/KMS, HA/DR (60 questions)", "Practice set 4: Troubleshooting, Observability, Governance (70+ questions)", "Timed scenario drills to simulate exam pacing"]}, {"title": "Interview Preparation & Doubt Clearing", "bullets": ["Common OCI Operations Associate interview questions and model answers", "Behavioral and scenario interview questions for cloud operations roles", "Open doubt-clearing session covering any remaining topic", "Personalized weak-area identification per student"]}], "bt": "Remember -> Analyze -> Evaluate", "outcomes": ["(CO6) Recall key facts and terminology across the full 10-day curriculum"], "focus": "Complete Revision, Oracle Skill Check Review, Scenario-Based Practice, 250+ MCQ Bank, Interview Preparation"}, {"day": 12, "domainSections": ["Full Mock Examination", "Practical Console/CLI Assessment", "Case Study & Lab-Based Assessment", "Certification Readiness Review"], "tags": ["Certification Mock Exam", "Timed Conditions", "Weighted Coverage", "Practical Assessment", "Rubric-Based Grading", "Task Verification", "Applied Case Study", "Lab-Based Grading", "Cumulative Validation", "Final Readiness Review", "Individual Action Plan", "Next Steps"], "sections": [{"title": "Full Mock Examination", "bullets": ["Full-length mock exam simulating the Oracle OCI Operations Associate certification format", "Timed, proctored-style exam conditions", "Coverage proportional to official exam topic weightings"]}, {"title": "Practical Console/CLI Assessment", "bullets": ["Hands-on tasks: create IAM resources, deploy a VCN, launch Compute via CLI", "Timed practical tasks with a defined grading rubric", "Verification of task completion in the OCI Console"]}, {"title": "Case Study & Lab-Based Assessment", "bullets": ["Individual case study: propose and justify an end-to-end OCI operations solution", "Written architecture rationale covering security, HA/DR and cost", "Grading of cumulative lab artifacts from Days 1-10", "Verification of Terraform/Resource Manager deployments and clean-up", "Feedback on lab execution quality and best-practice adherence"]}, {"title": "Certification Readiness Review", "bullets": ["Consolidated score review across mock exam, practical, case study and labs", "Individual readiness rating and recommended focus areas", "Guidance on scheduling the official Oracle OCI Operations Associate exam", "Course wrap-up and certification pathway next steps"]}], "bt": "Apply -> Analyze -> Evaluate", "outcomes": ["(CO6) Simulate the certification exam experience under realistic timed conditions"], "focus": "Full Mock Examination, Practical Console/CLI Assessment, Case Study & Lab-Based Assessment, Certification Readiness Review"}];
@@ -236,10 +237,12 @@ function VisualizerFrame({ pageId }) {
 function CloudBootScreen() {
   const [phraseIdx, setPhraseIdx] = useState(0);
   const phrases = [
+    "INITIALIZING SYSTEM…",
     "Connecting to learning environment…",
     "Provisioning your workspace…",
     "Syncing syllabus & progress…",
     "Loading interactive visualizers…",
+    "SYSTEM READY",
   ];
   useEffect(() => {
     const iv = setInterval(() => setPhraseIdx(i => (i + 1) % phrases.length), 700);
@@ -335,6 +338,220 @@ function CloudBootScreen() {
   );
 }
 
+function FuturisticBackdrop({ theme }) {
+  const gridColor = theme === "dark" ? "rgba(255,255,255,.035)" : "rgba(20,30,60,.05)";
+  return (
+    <div style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden", pointerEvents: "none" }}>
+      <div className="sdv-bg-grid" style={{
+        position: "absolute", inset: "-50px", opacity: 1,
+        backgroundImage: "linear-gradient(" + gridColor + " 1px, transparent 1px), linear-gradient(90deg, " + gridColor + " 1px, transparent 1px)",
+        backgroundSize: "48px 48px", animation: "sdv-grid-drift 22s linear infinite",
+      }} />
+      <div className="sdv-bg-orb" style={{
+        position: "absolute", width: 420, height: 420, borderRadius: "50%", top: "-8%", left: "8%",
+        background: "radial-gradient(circle, rgba(226,76,62,.14), transparent 70%)",
+        filter: "blur(10px)", animation: "sdv-orb-float 16s ease-in-out infinite",
+      }} />
+      <div className="sdv-bg-orb" style={{
+        position: "absolute", width: 380, height: 380, borderRadius: "50%", bottom: "-10%", right: "6%",
+        background: "radial-gradient(circle, rgba(51,197,214,.12), transparent 70%)",
+        filter: "blur(10px)", animation: "sdv-orb-float 20s ease-in-out infinite reverse",
+      }} />
+      <div className="sdv-bg-orb" style={{
+        position: "absolute", width: 300, height: 300, borderRadius: "50%", top: "40%", left: "45%",
+        background: "radial-gradient(circle, rgba(139,124,240,.08), transparent 70%)",
+        filter: "blur(10px)", animation: "sdv-orb-float 24s ease-in-out infinite",
+      }} />
+    </div>
+  );
+}
+
+/* ---------- AI Assistant: a rule-based FAQ helper, not a live LLM — this is
+   a static artifact with no backend/API access, so answers come from a
+   small hand-written knowledge base about the app itself, matched by
+   keyword overlap. Falls back honestly when nothing matches, exactly as
+   specified, rather than ever inventing an answer. ---------- */
+const AI_KNOWLEDGE = [
+  { k: ["what", "app", "this", "about"], a: "This is your Student Data Visualizer — a workspace for the OCI Operations Associate 12-day syllabus (progress tracking) plus a full set of interactive OCI Cloud Operations Professional visualizers (theory decks, hands-on labs, and practice exams)." },
+  { k: ["syllabus", "modules", "topics"], a: "The Syllabus page breaks the 12-day Operations Associate curriculum into modules → sections → topics. Check off individual topics as you complete them — search and status filters help you find things fast." },
+  { k: ["visualizer", "visualizers", "theory", "hands-on", "lab", "labs"], a: "The Visualizers page has the full OCI Cloud Operations Professional set — 11 days of interactive theory decks and hands-on lab simulators, playable right in the app. It's a separate curriculum from the Syllabus tracker above it." },
+  { k: ["practice", "exam", "question", "questions", "quiz", "mcq"], a: "Under Visualizers → Practice you'll find two question banks: a 55-question Days 1–6 revision set and a 93-question full exam bank with mock exams." },
+  { k: ["reset", "clear", "start over"], a: "You can reset all progress from Profile → Reset Progress. Heads up: that clears every completed topic and your history, and can't be undone." },
+  { k: ["progress", "track", "tracking"], a: "Progress is tracked per-topic in the Syllabus and rolled up everywhere — Home, Dashboard, Progress and Analytics all read from the same numbers, so they always agree." },
+  { k: ["streak"], a: "Your learning streak counts consecutive days you've completed at least one topic. It's real data built from your own activity, not a fake counter." },
+  { k: ["theme", "dark", "light", "color"], a: "You can switch between dark and light mode from the header (sun/moon icon) or from Profile → Preferences. It applies across the whole app, including charts." },
+  { k: ["fullscreen", "maximize", "screen"], a: "The maximize icon in the header toggles full-screen mode using your browser's Fullscreen API. If your browser or environment blocks it, you'll see a small notice instead of it silently failing." },
+  { k: ["search"], a: "The Syllabus page has its own search box that matches modules, sections and topics, plus status filters (Not Started / In Progress / Completed)." },
+  { k: ["dashboard"], a: "Dashboard gives you the big picture: overall progress ring, module-by-module bars, a completion breakdown, and your progress trend over time." },
+  { k: ["analytics"], a: "Analytics goes a level deeper — module comparison, completion distribution, and a Bloom's-taxonomy coverage view of the curriculum." },
+  { k: ["profile", "settings", "name"], a: "Profile is where you edit your name, switch themes, review the program overview, and reset progress if you want a clean slate." },
+  { k: ["how it works", "get started", "getting started", "begin", "what can i do", "can i do here", "explain this page", "explain this"], a: "Start on the Syllabus page and check off topics as you go — everything else (Dashboard, Progress, Analytics) updates automatically. Explore Visualizers whenever you want the interactive lessons and labs." },
+  { k: ["explore features", "features", "overview", "quick overview"], a: "Key features: a live syllabus tracker, a full interactive visualizer library (theory + labs + practice exams), progress analytics, dark/light themes, and full-screen mode — all synced to one progress model." },
+  { k: ["contact", "support", "help", "need help"], a: "There's no live support channel built into this app — but Profile has the program overview, and this assistant can walk you through any section. What are you trying to do?" },
+  { k: ["who are you", "your name", "assistant"], a: "I'm your built-in guide to this workspace — I can explain any page or feature here, but I only know what's actually in this app." },
+];
+
+function matchAIResponse(input) {
+  const q = input.toLowerCase();
+  let best = null, bestScore = 0;
+  AI_KNOWLEDGE.forEach(entry => {
+    let score = 0;
+    entry.k.forEach(kw => { if (q.includes(kw)) score += kw.length > 4 ? 2 : 1; });
+    if (score > bestScore) { bestScore = score; best = entry; }
+  });
+  if (best && bestScore >= 2) return best.a;
+  return "I'm not able to answer that yet, but I can help you explore the available features and information on this website.";
+}
+
+function timeLabel(ts) {
+  return new Date(ts).toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+}
+
+const AI_SUGGESTIONS = ["What can I do here?", "Explain this page", "How do I get started?", "Show me the key features"];
+const AI_QUICK_CHIPS = ["Explore Features", "How It Works", "Need Help?", "Contact Support"];
+
+function AIAssistant({ t, theme, isMobile }) {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    { id: 0, role: "assistant", text: "Hi! I'm your workspace assistant. Ask me about the Syllabus, Visualizers, Progress, or anything else in the app.", ts: Date.now() }
+  ]);
+  const [input, setInput] = useState("");
+  const [typing, setTyping] = useState(false);
+  const scrollRef = useRef(null);
+  const idRef = useRef(1);
+
+  useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  }, [messages, typing, open]);
+
+  const send = useCallback((text) => {
+    const clean = text.trim();
+    if (!clean) return;
+    const userMsg = { id: idRef.current++, role: "user", text: clean, ts: Date.now() };
+    setMessages(m => [...m, userMsg]);
+    setInput("");
+    setTyping(true);
+    const reply = matchAIResponse(clean);
+    const delay = 450 + Math.min(600, reply.length * 4);
+    setTimeout(() => {
+      setTyping(false);
+      setMessages(m => [...m, { id: idRef.current++, role: "assistant", text: reply, ts: Date.now() }]);
+    }, delay);
+  }, []);
+
+  const resetConvo = useCallback(() => {
+    setMessages([{ id: 0, role: "assistant", text: "Conversation reset. What would you like to know?", ts: Date.now() }]);
+    idRef.current = 1;
+  }, []);
+
+  const panelStyle = isMobile
+    ? { position: "fixed", inset: 0, borderRadius: 0, width: "100%", height: "100%" }
+    : { position: "fixed", bottom: 92, right: 22, width: 360, height: 480, borderRadius: 16, boxShadow: "0 24px 60px -12px rgba(0,0,0,.5)" };
+
+  return (
+    <>
+      {!open && (
+        <button
+          onClick={() => setOpen(true)}
+          title="Ask AI Assistant"
+          className="sdv-glow-pulse"
+          style={{
+            position: "fixed", bottom: 22, right: 22, zIndex: 120, width: 56, height: 56, borderRadius: "50%",
+            background: "linear-gradient(135deg,#E24C3E,#8B7CF0)", border: "none", cursor: "pointer",
+            display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 10px 30px -8px rgba(226,76,62,.6)",
+          }}
+        >
+          <Sparkles size={22} color="#fff" strokeWidth={2} />
+        </button>
+      )}
+
+      {open && (
+        <div className="sdv-glass sdv-fade" style={{
+          ...panelStyle, zIndex: 130, display: "flex", flexDirection: "column", overflow: "hidden",
+          background: theme === "dark" ? "rgba(19,28,46,.92)" : "rgba(255,255,255,.94)",
+          border: "1px solid " + t.border,
+        }}>
+          <div style={{
+            flex: "0 0 auto", display: "flex", alignItems: "center", gap: 10, padding: "12px 14px",
+            borderBottom: "1px solid " + t.border, background: theme === "dark" ? "rgba(255,255,255,.03)" : "rgba(0,0,0,.02)",
+          }}>
+            <div style={{
+              width: 32, height: 32, borderRadius: 9, background: "linear-gradient(135deg,#E24C3E,#8B7CF0)",
+              display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+            }}><Sparkles size={15} color="#fff" /></div>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: t.text }}>AI Assistant</div>
+              <div style={{ fontSize: 10.5, color: t.green, display: "flex", alignItems: "center", gap: 4 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: t.green }} /> Online
+              </div>
+            </div>
+            <button onClick={resetConvo} title="Reset conversation" style={{ background: "none", border: "none", color: t.textFaint, cursor: "pointer", padding: 6 }}><Trash2 size={15} /></button>
+            <button onClick={() => setOpen(false)} title="Minimize" style={{ background: "none", border: "none", color: t.textFaint, cursor: "pointer", padding: 6 }}><Minus size={15} /></button>
+            <button onClick={() => setOpen(false)} title="Close" style={{ background: "none", border: "none", color: t.textFaint, cursor: "pointer", padding: 6 }}><X size={15} /></button>
+          </div>
+
+          <div ref={scrollRef} className="sdv-scroll" style={{ flex: 1, overflowY: "auto", padding: "14px", display: "flex", flexDirection: "column", gap: 10 }}>
+            {messages.map(m => (
+              <div key={m.id} className="sdv-fade" style={{ display: "flex", flexDirection: "column", alignItems: m.role === "user" ? "flex-end" : "flex-start" }}>
+                <div style={{
+                  maxWidth: "82%", padding: "9px 12px", borderRadius: m.role === "user" ? "12px 12px 3px 12px" : "12px 12px 12px 3px",
+                  background: m.role === "user" ? "linear-gradient(135deg,#E24C3E,#C74634)" : t.surfaceHi,
+                  color: m.role === "user" ? "#fff" : t.text, fontSize: 12.5, lineHeight: 1.5,
+                  border: m.role === "user" ? "none" : "1px solid " + t.border,
+                }}>{m.text}</div>
+                <div style={{ fontSize: 9.5, color: t.textFaint, marginTop: 3 }}>{timeLabel(m.ts)}</div>
+              </div>
+            ))}
+            {typing && (
+              <div style={{ display: "flex", alignItems: "center", gap: 4, padding: "9px 12px", borderRadius: "12px 12px 12px 3px", background: t.surfaceHi, border: "1px solid " + t.border, width: "fit-content" }}>
+                {[0, 1, 2].map(i => (
+                  <span key={i} style={{ width: 5, height: 5, borderRadius: "50%", background: t.textFaint, animation: "sdv-status-blink 1s ease-in-out infinite", animationDelay: i * 0.15 + "s" }} />
+                ))}
+              </div>
+            )}
+            {messages.length <= 1 && !typing && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 4 }}>
+                {AI_SUGGESTIONS.map(s => (
+                  <button key={s} onClick={() => send(s)} style={{
+                    textAlign: "left", background: t.surfaceHi, border: "1px solid " + t.border, color: t.textDim,
+                    borderRadius: 9, padding: "8px 10px", fontSize: 11.5, cursor: "pointer",
+                  }}>{s}</button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div style={{ flex: "0 0 auto", padding: "8px 12px 0", display: "flex", gap: 6, flexWrap: "wrap" }}>
+            {AI_QUICK_CHIPS.map(c => (
+              <button key={c} onClick={() => send(c)} style={{
+                background: "transparent", border: "1px solid " + t.border, color: t.textFaint,
+                borderRadius: 20, padding: "4px 10px", fontSize: 10.5, cursor: "pointer",
+              }}>{c}</button>
+            ))}
+          </div>
+
+          <div style={{ flex: "0 0 auto", display: "flex", gap: 8, padding: 12 }}>
+            <input
+              value={input} onChange={e => setInput(e.target.value)}
+              onKeyDown={e => { if (e.key === "Enter") send(input); }}
+              placeholder="Ask me anything about this app…"
+              style={{
+                flex: 1, background: t.surfaceHi, border: "1px solid " + t.border, color: t.text,
+                borderRadius: 10, padding: "9px 12px", fontSize: 12.5, fontFamily: "Inter, sans-serif",
+              }}
+            />
+            <button onClick={() => send(input)} disabled={!input.trim()} style={{
+              background: input.trim() ? "linear-gradient(135deg,#E24C3E,#C74634)" : t.surfaceHi,
+              border: "none", borderRadius: 10, width: 38, height: 38, display: "flex", alignItems: "center", justifyContent: "center",
+              color: input.trim() ? "#fff" : t.textFaint, cursor: input.trim() ? "pointer" : "default", flexShrink: 0,
+            }}><Send size={15} /></button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 function Toast({ message }) {
   if (!message) return null;
   return (
@@ -377,18 +594,83 @@ function ProgressRing({ pct, size = 150, stroke = 14, color, track, label, sub }
   );
 }
 
-function StatCard({ icon: Icon, label, value, sub, accent, t }) {
+function AnimatedNumber({ value, duration = 900, formatter }) {
+  const [display, setDisplay] = useState(0);
+  const prevValue = useRef(0);
+  const reduceMotion = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  useEffect(() => {
+    if (reduceMotion) { setDisplay(value); prevValue.current = value; return; }
+    const start = prevValue.current;
+    const delta = value - start;
+    if (delta === 0) return;
+    const t0 = performance.now();
+    let raf;
+    const step = (now) => {
+      const safeNow = (typeof now === "number" && !isNaN(now)) ? now : performance.now();
+      const p = Math.min(1, (safeNow - t0) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setDisplay(start + delta * eased);
+      if (p < 1) raf = requestAnimationFrame(step);
+      else prevValue.current = value;
+    };
+    raf = requestAnimationFrame(step);
+    return () => raf && cancelAnimationFrame(raf);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value]);
+
+  const shown = formatter ? formatter(display) : Math.round(display);
+  return <>{shown}</>;
+}
+
+function Reveal({ children, delay = 0, style }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") { setVisible(true); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { setVisible(true); io.disconnect(); } });
+    }, { threshold: 0.15 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
   return (
-    <div className="sdv-card" style={{
-      background: t.surface, border: "1px solid " + t.border, borderRadius: 14,
-      padding: "16px 18px", flex: "1 1 180px", minWidth: 160,
-      display: "flex", flexDirection: "column", gap: 8,
+    <div ref={ref} style={{
+      ...style,
+      opacity: visible ? 1 : 0,
+      transform: visible ? "translateY(0)" : "translateY(14px)",
+      transition: "opacity .55s cubic-bezier(.4,0,.2,1) " + delay + "ms, transform .55s cubic-bezier(.4,0,.2,1) " + delay + "ms",
     }}>
+      {children}
+    </div>
+  );
+}
+
+function StatCard({ icon: Icon, label, value, numeric, suffix, sub, accent, t }) {
+  const [hover, setHover] = useState(false);
+  return (
+    <div
+      className="sdv-card sdv-glass"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        background: t.surface, border: "1px solid " + (hover ? accent : t.border), borderRadius: 14,
+        padding: "16px 18px", flex: "1 1 180px", minWidth: 160,
+        display: "flex", flexDirection: "column", gap: 8,
+        transform: hover ? "translateY(-3px)" : "translateY(0)",
+        boxShadow: hover ? "0 14px 30px -10px " + accent + "55, 0 0 0 1px " + accent + "33 inset" : "none",
+        transition: "transform .22s cubic-bezier(.4,0,.2,1), box-shadow .22s ease, border-color .22s ease",
+      }}
+    >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <span style={{ fontSize: 11.5, color: t.textDim, fontWeight: 600, textTransform: "uppercase", letterSpacing: .4 }}>{label}</span>
-        <Icon size={16} color={accent} strokeWidth={2.2} />
+        <Icon size={16} color={accent} strokeWidth={2.2} style={{ transform: hover ? "scale(1.18) rotate(-4deg)" : "scale(1)", transition: "transform .25s cubic-bezier(.34,1.56,.64,1)" }} />
       </div>
-      <div style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: 26, fontWeight: 700, color: t.text }}>{value}</div>
+      <div style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: 26, fontWeight: 700, color: t.text }}>
+        {numeric !== undefined ? <><AnimatedNumber value={numeric} />{suffix || ""}</> : value}
+      </div>
       {sub && <div style={{ fontSize: 11.5, color: t.textFaint }}>{sub}</div>}
     </div>
   );
@@ -471,7 +753,7 @@ export default function App() {
       if (h) setHistory(h);
       if (th) setTheme(th);
       const elapsed = Date.now() - start;
-      const remaining = Math.max(0, 1100 - elapsed);
+      const remaining = Math.max(0, 1700 - elapsed);
       setTimeout(() => setBooted(true), remaining);
     })();
   }, []);
@@ -642,15 +924,31 @@ export default function App() {
     .sdv-scroll::-webkit-scrollbar-thumb { background: ${t.borderHi}; border-radius: 6px; }
     .sdv-scroll::-webkit-scrollbar-track { background: transparent; }
     .sdv-card { transition: border-color .15s ease, transform .12s ease; }
-    .sdv-card:hover { border-color: ${t.borderHi}; }
+    .sdv-card:hover { border-color: ${t.borderHi}; transform: translateY(-2px); }
     .sdv-nav-item { transition: background .15s ease, color .15s ease; }
     .sdv-topic-row { transition: background .12s ease; }
     .sdv-topic-row:hover { background: ${t.surfaceHi}; }
+    .sdv-glass { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+    .sdv-shimmer-btn { position: relative; overflow: hidden; }
+    .sdv-shimmer-btn::after {
+      content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+      background: linear-gradient(115deg, transparent, rgba(255,255,255,.28), transparent);
+      transform: skewX(-18deg); transition: left .65s ease;
+    }
+    .sdv-shimmer-btn:hover::after { left: 130%; }
+    .sdv-glow-pulse { animation: sdv-glow-pulse 2.6s ease-in-out infinite; }
+    @keyframes sdv-glow-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(226,76,62,.35); } 50% { box-shadow: 0 0 0 8px rgba(226,76,62,0); } }
+    @keyframes sdv-status-blink { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+    @keyframes sdv-grid-drift { from { background-position: 0 0; } to { background-position: 48px 48px; } }
+    @keyframes sdv-orb-float { 0%,100% { transform: translate(0,0); } 50% { transform: translate(18px,-22px); } }
     @keyframes sdv-toast-in { from { opacity:0; transform: translateY(8px);} to {opacity:1; transform:translateY(0);} }
     @keyframes sdv-fade-up { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:translateY(0);} }
     .sdv-fade { animation: sdv-fade-up .35s cubic-bezier(.4,0,.2,1); }
     button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 2px solid ${t.cyan}; outline-offset: 2px; }
-    @media (prefers-reduced-motion: reduce) { .sdv-fade, .sdv-card, .sdv-nav-item { animation: none !important; transition: none !important; } }
+    @media (prefers-reduced-motion: reduce) {
+      .sdv-fade, .sdv-card, .sdv-nav-item, .sdv-glow-pulse, .sdv-shimmer-btn::after { animation: none !important; transition: none !important; }
+      .sdv-bg-grid, .sdv-bg-orb { animation: none !important; }
+    }
   `;
 
   if (!booted) {
@@ -736,7 +1034,9 @@ export default function App() {
     }}>
       <style>{"html,body{margin:0;padding:0;height:100%;width:100%;} #root, #app, body>div:first-child{height:100%;} *{box-sizing:border-box;}"}</style>
       <style>{globalCss}</style>
+      <FuturisticBackdrop theme={theme} />
       <Toast message={toast} />
+      <AIAssistant t={t} theme={theme} isMobile={isMobile} />
 
       {/* mobile backdrop */}
       {mobileOpen && (
@@ -810,16 +1110,25 @@ export default function App() {
       </div>
 
       {/* ---- main column ---- */}
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, minHeight: 0 }}>
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, minHeight: 0, position: "relative", zIndex: 1 }}>
         {/* header */}
-        <div style={{
+        <div className="sdv-glass" style={{
           height: 60, flexShrink: 0, display: "flex", alignItems: "center", gap: 14, padding: "0 20px",
-          borderBottom: "1px solid " + t.border, background: t.bgAlt
+          borderBottom: "1px solid " + t.border,
+          background: theme === "dark" ? "rgba(14,21,38,.72)" : "rgba(255,255,255,.72)",
         }}>
           <button onClick={() => setMobileOpen(true)} style={{
             display: isMobile ? "flex" : "none", background: "none", border: "none", color: t.textDim, cursor: "pointer"
           }}><Menu size={19} /></button>
           <div style={{ fontFamily: "Space Grotesk, sans-serif", fontWeight: 700, fontSize: 16, color: t.text }}>{pageTitle}</div>
+          <div style={{
+            display: isMobile ? "none" : "flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 600,
+            color: t.textFaint, letterSpacing: .4, background: t.surfaceHi, border: "1px solid " + t.border,
+            borderRadius: 20, padding: "4px 10px 4px 8px",
+          }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: t.green, animation: "sdv-status-blink 2s ease-in-out infinite" }} />
+            ALL SYSTEMS OPERATIONAL
+          </div>
 
           <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8 }}>
             <div style={{
@@ -868,7 +1177,23 @@ export default function App() {
                     background: "radial-gradient(circle, rgba(226,76,62,.16), transparent 70%)",
                     top: -110, right: -60, pointerEvents: "none"
                   }} />
+                  {[[10, 18, 0], [22, 68, 4], [88, 30, 8], [78, 78, 12]].map(([top, left, delay], i) => (
+                    <span key={i} style={{
+                      position: "absolute", top: top + "%", left: left + "%", width: 3, height: 3, borderRadius: "50%",
+                      background: t.cyan, opacity: .5, animation: "sdv-orb-float " + (7 + delay) + "s ease-in-out infinite",
+                      animationDelay: delay * 0.2 + "s", pointerEvents: "none",
+                    }} />
+                  ))}
                   <div style={{ position: "relative", maxWidth: 620 }}>
+                    <div style={{
+                      display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700,
+                      color: t.green, letterSpacing: .5, background: theme === "dark" ? "rgba(63,190,123,.1)" : "rgba(30,154,93,.08)",
+                      border: "1px solid " + (theme === "dark" ? "rgba(63,190,123,.3)" : "rgba(30,154,93,.25)"),
+                      borderRadius: 20, padding: "4px 10px", marginBottom: 14,
+                    }}>
+                      <span style={{ width: 6, height: 6, borderRadius: "50%", background: t.green, animation: "sdv-status-blink 2s ease-in-out infinite" }} />
+                      SYSTEM ONLINE
+                    </div>
                     <div style={{ fontSize: 12.5, color: t.cyan, fontWeight: 600, letterSpacing: .3, marginBottom: 8 }}>
                       OCI OPERATIONS ASSOCIATE · 12-DAY PROGRAM
                     </div>
@@ -880,15 +1205,17 @@ export default function App() {
                       explore your performance, and stay on top of your learning journey.
                     </p>
                     <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                      <button onClick={() => setPage("syllabus")} style={{
+                      <button className="sdv-shimmer-btn" onClick={() => setPage("syllabus")} style={{
                         background: "linear-gradient(135deg,#E24C3E,#C74634)", color: "#fff", border: "none",
                         borderRadius: 10, padding: "11px 20px", fontSize: 13.5, fontWeight: 600, cursor: "pointer",
-                        display: "inline-flex", alignItems: "center", gap: 8
+                        display: "inline-flex", alignItems: "center", gap: 8,
+                        boxShadow: "0 8px 24px -8px rgba(226,76,62,.6)",
                       }}>
                         Continue Syllabus <ArrowRight size={15} />
                       </button>
-                      <button onClick={() => setPage("visualizers")} style={{
-                        background: "transparent", color: t.text, border: "1px solid " + t.borderHi,
+                      <button className="sdv-glass" onClick={() => setPage("visualizers")} style={{
+                        background: theme === "dark" ? "rgba(255,255,255,.05)" : "rgba(255,255,255,.5)",
+                        color: t.text, border: "1px solid " + t.borderHi,
                         borderRadius: 10, padding: "11px 20px", fontSize: 13.5, fontWeight: 600, cursor: "pointer",
                         display: "inline-flex", alignItems: "center", gap: 8
                       }}>
@@ -899,9 +1226,9 @@ export default function App() {
                 </div>
 
                 <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 28 }}>
-                  <StatCard t={t} icon={Layers} label="Total Modules" value={SYLLABUS.length} sub="12-day curriculum" accent={t.cyan} />
-                  <StatCard t={t} icon={CheckCircle2} label="Completed Modules" value={completedModules} sub={completedModules + " of " + SYLLABUS.length + " days done"} accent={t.green} />
-                  <StatCard t={t} icon={Target} label="Overall Progress" value={Math.round(overallPct) + "%"} sub={completedCount + " of " + totalTopics + " topics"} accent={t.red} />
+                  <StatCard t={t} icon={Layers} label="Total Modules" numeric={SYLLABUS.length} sub="12-day curriculum" accent={t.cyan} />
+                  <StatCard t={t} icon={CheckCircle2} label="Completed Modules" numeric={completedModules} sub={completedModules + " of " + SYLLABUS.length + " days done"} accent={t.green} />
+                  <StatCard t={t} icon={Target} label="Overall Progress" numeric={overallPct} suffix="%" sub={completedCount + " of " + totalTopics + " topics"} accent={t.red} />
                   <StatCard t={t} icon={Compass} label="Current Module" value={"Day " + currentModule.day} sub={currentModule.focus} accent={t.amber} />
                   <StatCard t={t} icon={Flame} label="Learning Streak" value={streak > 0 ? streak + (streak === 1 ? " day" : " days") : "—"} sub={streak > 0 ? "Keep it going" : "Complete a topic to start"} accent={t.violet} />
                 </div>
@@ -1212,9 +1539,9 @@ export default function App() {
                 </div>
 
                 <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-                  <StatCard t={t} icon={Layers} label="Sections Covered" value={SYLLABUS.reduce((s, d) => s + d.sections.length, 0)} sub="across all 12 days" accent={t.cyan} />
-                  <StatCard t={t} icon={BookOpen} label="Total Topics" value={totalTopics} sub="individually trackable" accent={t.amber} />
-                  <StatCard t={t} icon={CheckCircle2} label="Topics Completed" value={completedCount} sub={Math.round(overallPct) + "% of curriculum"} accent={t.green} />
+                  <StatCard t={t} icon={Layers} label="Sections Covered" numeric={SYLLABUS.reduce((s, d) => s + d.sections.length, 0)} sub="across all 12 days" accent={t.cyan} />
+                  <StatCard t={t} icon={BookOpen} label="Total Topics" numeric={totalTopics} sub="individually trackable" accent={t.amber} />
+                  <StatCard t={t} icon={CheckCircle2} label="Topics Completed" numeric={completedCount} sub={Math.round(overallPct) + "% of curriculum"} accent={t.green} />
                 </div>
               </div>
             )}
