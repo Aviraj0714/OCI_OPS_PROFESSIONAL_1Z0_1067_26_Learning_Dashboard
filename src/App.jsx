@@ -277,10 +277,12 @@ function CloudBootScreen() {
 
   return (
     <div style={{
-      height: "100vh", background: "radial-gradient(ellipse at 50% 30%, #101B32 0%, #070B14 70%)",
+      position: "fixed", inset: 0, width: "100vw", height: "100vh",
+      background: "radial-gradient(ellipse at 50% 30%, #101B32 0%, #070B14 70%)",
       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-      fontFamily: "Inter, sans-serif", position: "relative", overflow: "hidden", borderRadius: 14,
+      fontFamily: "Inter, sans-serif", overflow: "hidden",
     }}>
+      <style>{"html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden;} #root,#app,body>div:first-child{height:100%;width:100%;max-width:none;padding:0;margin:0;} *{box-sizing:border-box;}"}</style>
       <style>{`
         @keyframes sdv-orbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         @keyframes sdv-orbit-rev { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
@@ -441,6 +443,35 @@ function matchVisualizerContent(q, terms) {
   return hits.length ? hits.slice(0, 6) : null;
 }
 
+function pageDisplayLabel(pageId) {
+  const meta = getVisualizerMeta(pageId);
+  if (!meta) return pageId;
+  if (meta.kind === "practice") return meta.title;
+  return "Day " + meta.day + " " + (meta.kind === "lab" ? "Hands-on Lab" : "Theory") + " (" + meta.title + ")";
+}
+
+/* searches every day's real page content (theory, labs, practice), not just
+   whichever one happens to be open — so "what does day 5 cover about VCN"
+   or a plain "what is a compartment" works from anywhere in the app */
+function matchAnyVisualizerContent(q) {
+  const qWords = q.split(/\W+/).filter(w => w.length > 3).map(stem);
+  if (!qWords.length) return null;
+  const results = [];
+  Object.keys(VISUALIZER_CONTENT_INDEX).forEach(pageId => {
+    const terms = VISUALIZER_CONTENT_INDEX[pageId];
+    const hits = terms.filter(term => {
+      const termWords = term.toLowerCase().split(/\W+/).filter(w => w.length > 3).map(stem);
+      return termWords.some(tw => qWords.includes(tw));
+    });
+    if (hits.length) results.push({ pageId, hits });
+  });
+  if (!results.length) return null;
+  results.sort((a, b) => b.hits.length - a.hits.length);
+  const top = results.slice(0, 3);
+  const lines = top.map(r => pageDisplayLabel(r.pageId) + " — " + r.hits.slice(0, 3).join(", "));
+  return "That's covered in the Visualizers section:\n" + lines.join("\n") + "\nOpen Visualizers to explore any of these in full.";
+}
+
 function matchAIResponse(input, context) {
   const q = input.toLowerCase();
   const { page, visualizerOpen, visualizerTitle, visualizerDay, visualizerKind } = context || {};
@@ -468,6 +499,9 @@ function matchAIResponse(input, context) {
       return "On this page (\"" + visualizerTitle + "\"), that touches on: " + hits.join(", ") + ". Scroll through the panels here for the full explanation.";
     }
   }
+
+  const anyDay = matchAnyVisualizerContent(q);
+  if (anyDay) return anyDay;
 
   return "I'm not able to answer that yet, but I can help you explore the available features and information on this website.";
 }
@@ -575,7 +609,7 @@ function AIAssistant({ t, theme, isMobile, page, visualizerOpen, visualizerMeta 
                 <div style={{
                   maxWidth: "82%", padding: "9px 12px", borderRadius: m.role === "user" ? "12px 12px 3px 12px" : "12px 12px 12px 3px",
                   background: m.role === "user" ? "linear-gradient(135deg,#E24C3E,#C74634)" : t.surfaceHi,
-                  color: m.role === "user" ? "#fff" : t.text, fontSize: 12.5, lineHeight: 1.5,
+                  color: m.role === "user" ? "#fff" : t.text, fontSize: 12.5, lineHeight: 1.5, whiteSpace: "pre-line",
                   border: m.role === "user" ? "none" : "1px solid " + t.border,
                 }}>{m.text}</div>
                 <div style={{ fontSize: 9.5, color: t.textFaint, marginTop: 3 }}>{timeLabel(m.ts)}</div>
@@ -1038,11 +1072,11 @@ export default function App() {
   if (!profile) {
     return (
       <div className="sdv-root" style={{
-        height: "100vh", width: "100%", boxSizing: "border-box",
+        position: "fixed", inset: 0, width: "100vw", height: "100vh", boxSizing: "border-box",
         background: "linear-gradient(160deg,#0A0F1A 0%,#0E1526 55%,#131A2A 100%)",
-        display: "flex", alignItems: "center", justifyContent: "center", padding: 24, position: "relative", overflow: "hidden"
+        display: "flex", alignItems: "center", justifyContent: "center", padding: 24, overflow: "hidden"
       }}>
-        <style>{"html,body{margin:0;padding:0;height:100%;width:100%;} *{box-sizing:border-box;}"}</style>
+        <style>{"html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden;} #root,#app,body>div:first-child{height:100%;width:100%;max-width:none;padding:0;margin:0;} *{box-sizing:border-box;}"}</style>
         <style>{globalCss}</style>
         <div style={{
           position: "absolute", width: 480, height: 480, borderRadius: "50%",
@@ -1107,11 +1141,11 @@ export default function App() {
 
   return (
     <div ref={rootRef} className="sdv-root" style={{
-      background: t.bg, height: "100vh", maxHeight: "100vh", width: "100%",
-      display: "flex", flexDirection: "row", position: "relative",
-      color: t.text, overflow: "hidden", boxSizing: "border-box",
+      background: t.bg, position: "fixed", inset: 0, width: "100vw", height: "100vh",
+      display: "flex", flexDirection: "row",
+      color: t.text, overflow: "hidden", boxSizing: "border-box", zIndex: 0,
     }}>
-      <style>{"html,body{margin:0;padding:0;height:100%;width:100%;} #root, #app, body>div:first-child{height:100%;} *{box-sizing:border-box;}"}</style>
+      <style>{"html,body{margin:0;padding:0;height:100%;width:100%;overflow:hidden;} #root,#app,body>div:first-child{height:100%;width:100%;max-width:none;padding:0;margin:0;} *{box-sizing:border-box;}"}</style>
       <style>{globalCss}</style>
       <FuturisticBackdrop theme={theme} />
       <Toast message={toast} />
